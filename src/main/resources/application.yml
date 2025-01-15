@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: skyjo
+  datasource:
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
+    username: skyjo
+    password:
+    driverClassName: org.h2.Driver
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.H2Dialect
+          jdbc:
+            lob:
+              non_contextual_creation: true
+          ddl-auto: create
+      open-in-view: true
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+  app:
+    server:
+      address: "http://localhost:8080"
+
